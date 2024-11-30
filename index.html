@@ -1,111 +1,187 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Biodata Pacar</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .card {
-            width: 80%;
-            max-width: 900px;
-            background: #fff;
-            border-radius: 15px;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            animation: slideIn 1.5s ease-out;
-        }
-        .header {
-            background: linear-gradient(135deg, #ff758c, #ff7eb3);
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .profile-picture {
-            text-align: center;
-            padding: 20px 0;
-        }
-        .profile-picture img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 5px solid #ff758c;
-        }
-        .content {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-        .column {
-            flex: 50%;
-            padding: 15px;
-        }
-        .label {
-            font-weight: bold;
-            font-size: 18px;
-            color: #555;
-        }
-        .value {
-            font-size: 16px;
-            color: #333;
-        }
-        .footer {
-            background: #f8f9fa;
-            text-align: center;
-            padding: 10px;
-            font-size: 14px;
-            color: #666;
-            border-top: 1px solid #e0e0e0;
-        }
-        /* Animations */
-        @keyframes slideIn {
-            from {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biodata Lengkap</title>
+  <style>
+    /* Reset default */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background: #fff;
+      width: 90%;
+      max-width: 800px;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .header {
+      background: #2575fc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header h1 {
+      margin-bottom: 5px;
+      font-size: 2rem;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .content h2 {
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #2575fc;
+      border-bottom: 2px solid #2575fc;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .profile-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+    }
+
+    .profile-image {
+      flex: 1;
+      min-width: 150px;
+      max-width: 200px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      border-radius: 50%;
+      border: 5px solid #2575fc;
+    }
+
+    .profile-details {
+      flex: 2;
+    }
+
+    .profile-details p {
+      margin: 10px 0;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .profile-details span {
+      font-weight: bold;
+      color: #2575fc;
+    }
+
+    .skills {
+      margin: 20px 0;
+    }
+
+    .skills ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .skills ul li {
+      margin: 5px 0;
+      font-size: 1rem;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .skills ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #2575fc;
+      font-size: 1.2rem;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 10px;
+      background: #f0f0f0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    .footer a {
+      color: #2575fc;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
-    <div class="card">
-        <div class="header">
-            Biodata Dia
-        </div>
-        <div class="profile-picture">
-            <!-- Ganti src dengan URL atau path foto pacar -->
-            <img src="Tak berjudul16_20241130125920.png" alt="Foto Pacar">
-        </div>
-        <div class="content">
-            <div class="column">
-                <p><span class="label">Nama:</span> <span class="value">Nurlia Oktaviana</span></p>
-                <p><span class="label">Tanggal Lahir:</span> <span class="value">-</span></p>
-                <p><span class="label">Asal:</span> <span class="value">Tangerang</span></p>
-            </div>
-            <div class="column">
-                <p><span class="label">Hobi:</span> <span class="value">Marah Marah</span></p>
-                <p><span class="label">Cita-cita:</span> <span class="value">Pacar Jaemin</span></p>
-                <p><span class="label">Kepribadian:</span> <span class="value">baik, cantik, lucu</span></p>
-            </div>
-        </div>
-        <div class="footer">
-            "dia udah ada yang punya"  
-        </div>
+  <div class="container">
+    <div class="header">
+      <h1>Muhammad Wisnu Pratama</h1>
+      <p>Software Engineer | Web Developer</p>
     </div>
+    <div class="content">
+      <h2>Profile</h2>
+      <div class="profile-section">
+        <div class="profile-image">
+          <img src="Tak berjudul11_20241123204548.png" alt="Profile Picture">
+        </div>
+        <div class="profile-details">
+          <p><span>Full Name:</span> Muhammad Wisnu Pratama</p>
+          <p><span>Date of Birth:</span> 11 august 2009</p>
+          <p><span>Address:</span> Tangerang,jawa barat</p>
+          <p><span>instagram:</span> @wisnuex21</p>
+          <p><span>Phone:</span> +62 813 8170 5580</p>
+        </div>
+      </div>
+      <h2>Skills</h2>
+      <div class="skills">
+        <ul>
+          <li>Web Development (HTML, CSS, JavaScript)</li>
+          <li>Design (poster, editing, cinematic)</li>
+          <li>Database Management (MongoDB, MySQL)</li>
+          <li>UI/UX Design</li>
+          <li>Volley ball</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Created by <a href="#">Muhammad Wisnu Pratama</a> © 2024</p>
+    </div>
+  </div>
 </body>
 </html>
